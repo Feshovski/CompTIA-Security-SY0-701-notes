@@ -4,6 +4,7 @@ Hi All, I completed my exam on the 16th of August 2024 after roughly a month of 
 
 ProfesserMesser's [YouTube Playlist, CompTIA SY0-701 Security+ Training Course ](https://www.youtube.com/playlist?list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv) was my main study resource where most of my notes were derived from, I used other tools to help me better understand concepts I was struggling to understand. 
 
+Free labs I used to help wrap my head around some concepts: [101Labs.net](https://www.101labs.net/comptia-security/), **note that you will need your own VM with a Linux distro installed to complete these.**
 
 <img src="https://github.com/Feshovski/CompTia-Security-SY0-701-notes/blob/main/CompTIA%20Certificate.png?raw=true" width="600"/>
 
