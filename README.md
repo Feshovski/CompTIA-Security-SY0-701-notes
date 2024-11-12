@@ -9,48 +9,56 @@ ProfesserMesser's [YouTube Playlist, CompTIA SY0-701 Security+ Training Course ]
 <details>
 <summary>Key Information Security+ Exam</summary>
 
-**How to pass your SY0-701 Security+ Exam**
+# How to pass your SY0-701 Security+ Exam
 
-**Pre-text**
+## Pre-text
 
 The most popular technology certification in the world
 
-Career Growth - Security+ builds a great foundation
+### Career Growth
+- Security+ builds a great foundation
 
-Professional pre requisite
+### Professional prerequisite
+- Personal knowledge and satisfaction.
 
-Personal knowledge and satisfaction.
-
-Computing Technology Industry Association. (CompTia)
+### Computing Technology Industry Association (CompTIA)
 - The largest provider of vendor-neutral IT certifications
-- Members include IT resellers, IT distributors, IT manufacturers, and IT training centres.
+- Members include IT resellers, IT distributors, IT manufacturers, and IT training centers.
 
-Exam Specifications:
-- 90 minute exam, maximum of 90 questions
-- Passing score: 750 on a scale of 100-900
+---
 
-| Domain                                           | % of Exam |
-|--------------------------------------------------|-----------|
-| 1.0 - General Security Concepts                  | 12%       |
-| 2.0 - Threats, Vulnerabilities, and Mitigations  | 22%       |
-| 3.0 - Security Architecture                      | 18%       |
-| 4.0 - Security Operations                        | 28%       |
-| 5.0 - Security Program Management and Oversight  | 20%       |
+## Exam Specifications:
 
+- **90-minute exam**, maximum of **90 questions**
+- **Passing score**: 750 on a scale of 100-900
 
-**Multiple Choice**
+| Domain | % of Exam |
+|--------|-----------|
+| 1.0 - General Security Concepts | 12% |
+| 2.0 - Threats, Vulnerabilities, and Mitigations | 22% |
+| 3.0 - Security Architecture | 18% |
+| 4.0 - Security Operations | 28% |
+| 5.0 - Security Program Management and Oversight | 20% |
 
-- Single, multiple answers
- 
-**Performance-based**
+---
 
-- Complete a task
+## Exam Types:
 
-- Matching, sorting, drag-and-drop, etc.
- 
-[CompTia Certification Objectives](https://www.comptia.org/training/resources/exam-objectives/comptia-security-701-exam-objectives)
+- **Multiple Choice**
+  - Single, multiple answers
 
-**Get as much hands-on as possible, CompTia Sec+ labs**
+- **Performance-based**
+  - Complete a task
+  - Matching, sorting, drag-and-drop, etc.
+
+---
+
+## CompTIA Certification Objectives
+
+- [Exam objectives](https://www.comptia.org/training/resources/exam-objectives/comptia-security-701-exam-objectives)
+- Get as much hands-on as possible
+- CompTIA Security+ labs
+
 
 </details>
 
