@@ -4,7 +4,9 @@ Hi All, I completed my exam on the 16th of August 2024 after roughly a month of 
 
 ProfesserMesser's [YouTube Playlist, CompTIA SY0-701 Security+ Training Course ](https://www.youtube.com/playlist?list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv) was my main study resource where most of my notes were derived from, I used other tools to help me better understand concepts I was struggling to understand. 
 
-Free labs I used to help wrap my head around some concepts: [101Labs.net](https://www.101labs.net/comptia-security/), **note that you will need your own VM with a Linux distro installed to complete these.**
+[Free labs](https://www.101labs.net/comptia-security/) I used to help wrap my head around some concepts**note that you will need your own VM with a Linux distro installed to complete these.**
+
+I am a full time student in Australia and was able to get a **50% voucher** after emailing CompTia and verifying my student status.
 
 <img src="https://github.com/Feshovski/CompTia-Security-SY0-701-notes/blob/main/CompTIA%20Certificate.png?raw=true" width="600"/>
 
@@ -1743,7 +1745,7 @@ An **on-path attack** occurs when an attacker places themselves between two devi
 Another form of on-path attack is the **on-path browser attack**, where malware or a trojan acts as a **proxy**. It redirects traffic before it reaches the network and after it leaves.
 - This is relatively easy to execute with **encrypted traffic**.
 
-### 2.4 Replay Attack
+# 2.4 Replay Attack
 
 A **replay attack** is when a valid data transmission is intercepted and maliciously or fraudulently repeated or delayed. The attacker captures the data, retransmits it, and may even modify it before sending it again. 
 
@@ -1782,7 +1784,7 @@ Attackers may manipulate HTTP headers to modify or hijack sessions.
 - **Additional security**: Tools like the **HTTPS Everywhere** browser extension or enforcing **Force-TLS** can enhance session security.
 - **VPN**: Encrypting sessions to a VPN concentrator further secures the connection.
 
-### 2.4 Malicious Code
+# 2.4 Malicious Code
 
 Malicious code refers to software or scripts used by attackers to exploit vulnerabilities, gain unauthorized access, or cause damage to systems. This can include techniques such as **social engineering**, **default credentials**, or exploiting **misconfigurations**, which may not require advanced technical skills but still pose serious risks to even well-secured systems.
 
@@ -1806,7 +1808,7 @@ One notable example is **WannaCry**, a ransomware attack that exploited a vulner
 
 Malicious code is often opportunistic, and while systems may be well-secured, it's essential to maintain proactive security measures and vigilance.
 
-### 2.4 Application Attacks
+# 2.4 Application Attacks
 
 Application attacks target vulnerabilities in software programs and web applications, exploiting weaknesses in the code or design. These attacks can lead to serious security breaches, allowing attackers to gain unauthorized access, execute arbitrary code, or manipulate data.
 
@@ -1852,7 +1854,7 @@ Directory traversal, or path traversal, allows attackers to access files and dir
   - Ensure proper directory access controls are in place.
   - Avoid using unsafe file paths like `../` in web application code.
 
-### 2.4 Cryptographic Attacks
+# 2.4 Cryptographic Attacks
 
 Cryptographic attacks aim to break the security of encrypted data, often exploiting weaknesses in how cryptographic algorithms or protocols are implemented. While encryption itself is a powerful tool for securing data, poor implementation or outdated protocols can make it vulnerable.
 
@@ -1892,7 +1894,7 @@ In the context of web security, **SSL/TLS downgrade attacks** strip the 'S' from
 
 ![image](https://github.com/user-attachments/assets/3083ce1a-1ae7-4881-9f96-abbe73624c93)
 
-### 2.4 Password Attacks
+# 2.4 Password Attacks
 
 **Plaintext/Unencrypted Passwords**  
 Some applications store passwords in plaintext, meaning they are not encrypted at all. This is a major security risk.
@@ -1924,7 +1926,7 @@ A **brute force attack** involves trying every possible password combination unt
   - This can take a significant amount of time, especially for complex passwords.
   - Using a strong hashing algorithm can slow down brute force attacks by making it more computationally expensive.
 
-### 2.4 Indicators of Compromise (IOC)
+# 2.4 Indicators of Compromise (IOC)
 
 Indicators of Compromise (IOC) refer to events or signs that suggest a system has been compromised by an attacker.
 
