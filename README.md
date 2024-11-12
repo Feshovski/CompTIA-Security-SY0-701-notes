@@ -52,7 +52,7 @@ Exam Specifications:
 </details>
 
 <details>
-<summary>1.1 Security Controls</summary>
+<summary>1.0 General Security Concepts</summary>
   
 # 1.1 Security Controls
   
@@ -130,12 +130,7 @@ These are not inclusive lists: There are many categories of controls, and some o
 - Train users on proper security policy
 - Post a sign for "Authorised Personnel Only"
 
-</details>
-
-<details>
-<summary>1.2 The CIA Triad</summary>
-
-# The CIA Triad
+# 1.2 The CIA Triad
 
 The CIA Triad is an easy way to remember the fundamentals of I.T Security.
 
@@ -171,11 +166,6 @@ The CIA Triad is an easy way to remember the fundamentals of I.T Security.
 - **Fault tolerance**: Ensure that a system will continue to run even when a failure occurs.
 - **Patching**: Ensure the systems are always as stable as possible and up to date with security patches to reduce the chances of an exploit.
 
-</details>
-
-<details>
-<summary>1.2 Non-repudiation</summary>
-
 # 1.2 Non-repudiation
 
 You can't deny what you've said. It can be compared to signing a contract, your signature adds non-repudiation, and others can verify your signature.
@@ -202,11 +192,6 @@ In Cryptography, we can use a hash:
 2. The recipient uses the sender's public key to decrypt the digital signature. If the decrypted hash matches the hash of the received message, it verifies that the message was sent by the holder of the private key and that it has not been altered.
 
 This method is used to ensure authenticity and integrity of the message, but not confidentiality.
-
-</details>
-
-<details>
-<summary>1.2 AAA Framework: Authentication, Authorisation and Accounting</summary>
 
 # 1.2 AAA Framework: Authentication, Authorisation and Accounting
 
@@ -243,12 +228,6 @@ The user or device has now authenticated, and we need to apply an authorisation 
 
 The use of an authorisation model will help reduce complexity and create a clear relationship between the user and the resource. Instead of mapping every individual user to an abstraction (group), it is easier to allocate permissions to them all.
 
-
-</details>
-
-<details>
-<summary>1.2 Gap Analysis</summary>
-
 # 1.2 Gap Analysis
 
 Where you are compared to where you want to be.  
@@ -270,11 +249,6 @@ A detailed analysis can help examine broad security categories and break those i
 
 "How to get from where you are, to where you want to be"
 ![image](https://github.com/user-attachments/assets/7572ca03-6048-4740-9144-f44249b43186)
-
-</details>
-
-<details>
-<summary>1.2 Zero Trust Security Model</summary>
 
 # 1.2 Zero Trust Security Model
 
@@ -351,11 +325,6 @@ Subjects and systems, end-users, applications, and non-human entities.
 ### Zero Trust Across Planes
 ![image](https://github.com/user-attachments/assets/8aac0e3d-50c0-4e1e-a5eb-98653bd7b0e2)
 
-</details>
-
-<details>
-<summary>1.2 Physical Security</summary>
-
 # 1.2 Physical Security
 
 ### Barricades / Bollards: Prevent access
@@ -401,10 +370,6 @@ Infrared, detects infrared radiation in both light and dark areas, common in mot
 - Pressure, detects a change in force, floor, and window sensors.
 - Microwave detects movement across a large area.
 - Ultrasonic signals receive reflected sound waves, it will detect motion and collision detection, etc.
-</details>
-
-<details>
-<summary>1.2 Deception and Disruption</summary>
 
 # 1.2 Deception and Disruption
 
@@ -431,11 +396,6 @@ Traceable data to track the malicious actors.
 - API credentials that do not actually provide access but a notification is sent to you when they're used.
 - Fake email addresses, constantly monitor the internet to see who posts it.
 - Honeytokens can be any type of data, database records, browser cookies, web page pixels, etc.
-
-</details>
-
-<details>
-<summary>1.3 Change Management</summary>
 
 # 1.3 Change Management
 
@@ -529,10 +489,6 @@ Change management is critical; it affects everyone in the organization.
 - Should be available on the intranet with all standard processes and procedures
 - Changes to the process are reflected in the standard.
 
-</details>
-
-<details>
-<summary>1.3 Technical Change Management</summary>
 
 # 1.3 Technical Change Management
 
@@ -604,10 +560,6 @@ Track changes to a file or configuration data over time.
 - Easily revert to a previous setting.
 Many opportunities to manage versions, router configurations, Windows OS patches, application registry entries.
 
-</details>
-
-<details>
-<summary>1.4 Public Key Infrastructure (PKI) and Cryptography</summary>
 
 # 1.4 Public Key Infrastructure (PKI) and Cryptography
 
@@ -649,10 +601,6 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - Government agencies may need to decrypt partner data.
 - Handing your private key to someone else may seem controversial; however, it is sometimes necessary.
 
-</details>
-
-<details>
-<summary>1.4 Encrypting Data</summary>
 
 # 1.4 Encrypting Data
 
@@ -700,10 +648,6 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - Hash a password, hash the hash of the password, and continue.
 - Brute-force attacks would require reversing each of those hashes, they'd have to spend much more time to decrypt.
 
-</details>
-
-<details>
-<summary>1.4 Key Exchange</summary>
 
 # 1.4 Key Exchange
 
@@ -726,10 +670,6 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 #### Symmetric key from asymmetric keys:
 - Use public and private key cryptography to create a symmetric key.
 
-</details>
-
-<details>
-<summary>1.4 Encryption Technologies</summary>
 
 # 1.4 Encryption Technologies
 
@@ -774,10 +714,7 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - Real-time memory encryption.
 - Root cryptographic keys.
 - Performs AES encryption in the hardware device AND MORE.
-</details>
 
-<details>
-<summary>1.4 Data Obfuscation</summary>
 
 # 1.4 Data Obfuscation
 
@@ -813,10 +750,6 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - Protects PII (Personally Identifiable Information) and other sensitive data.
 - May only be hidden from view, the data may still be intact in storage. Control the view based on permissions.
 - Many different techniques: substituting, shuffling, encrypting, masking out, etc.
-</details>
-
-<details>
-<summary>1.4 Hashes</summary>
 
 # 1.4 Hashes
 
@@ -878,10 +811,7 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 
 #### Verify with the Public Key
 - Any change in the message will invalidate the signature.
-</details>
 
-<details>
-<summary>1.4 Blockchain Technology</summary>
 
 # 1.4 Blockchain Technology
 
@@ -904,10 +834,7 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 ### Security of the Blockchain
 - If any blocks are altered, its hash and all following hashes in the chain are automatically recalculated.
 - The altered chain will no longer match the chains stored by the rest of the network and will be rejected.
-</details>
 
-<details>
-<summary>1.4 Certificates</summary>
 
 # 1.4 Certificates
 
