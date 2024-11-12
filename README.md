@@ -105,42 +105,42 @@ These are not inclusive lists: There are many categories of controls, and some o
 
 ### Types of Security Controls
 
-#### Preventive: Blocks access to a resource
+### Preventive: Blocks access to a resource
 **Prevent access:**
 - Firewall rules
 - Follow security policy
 - Guard shack checks all identification
 - Enable door locks
 
-#### Deterrent: Discourages an intrusion attempt, does not directly prevent access
+### Deterrent: Discourages an intrusion attempt, does not directly prevent access
 **Makes an attacker think twice:**
 - Application splash screens
 - Threat of demotion
 - Front reception desk
 - Posted warning signs
 
-#### Detective: Identify and log an intrusion attempt, may not prevent access
+### Detective: Identify and log an intrusion attempt, may not prevent access
 **Find the issue:**
 - Collect and review system logs
 - Review login reports
 - Regularly patrol the property
 - Enable motion detectors
 
-#### Corrective: Apply a control after an event has been detected, reverse the impact of an event, and continue operating with minimal downtime
+### Corrective: Apply a control after an event has been detected, reverse the impact of an event, and continue operating with minimal downtime
 **Correct the problem:**
 - Restoring from backups can mitigate a ransomware infection
 - Create policies for reporting security issues
 - Contact law enforcement to manage criminal activity
 - Use a fire extinguisher
 
-#### Compensating: Control using other means, existing controls aren't sufficient, may be temporary
+### Compensating: Control using other means, existing controls aren't sufficient, may be temporary
 **Prevent the exploitation of a weakness:**
 - Firewall blocks a specific application instead of patching the app
 - Implement a separation of duties
 - Require simultaneous guard duties
 - Generator used after power outage
 
-#### Directive: Direct a subject towards security compliance, a relatively weak security control
+### Directive: Direct a subject towards security compliance, a relatively weak security control
 **Do this, please:**
 - Store all sensitive files in a protected folder
 - Create compliance policies and procedures
@@ -327,14 +327,14 @@ Subjects and systems, end-users, applications, and non-human entities.
 
 ### Applying Trust in the Planes:
 
-#### Policy Decision Point (PDP):
+### Policy Decision Point (PDP):
 - There's a process for making an authentication decision.
 
-#### Policy Engine:
+### Policy Engine:
 - Evaluates each access decision based on policy and other information sources.
 - Grant, deny, or revoke access.
 
-#### Policy Administrator:
+### Policy Administrator:
 - Communicates with the policy enforcement point.
 - Generates access tokens or credentials.
 - Tells the PEP to allow or disallow access.
@@ -523,11 +523,11 @@ Any application can be dangerous.
 - Malware
 - Security Policy can control app execution, allow/deny list.
 
-#### Allow List:
+### Allow List:
 - Nothing runs unless it's approved.
 - Very restrictive.
 
-#### Deny List:
+### Deny List:
 - Nothing on the "bad list" can be executed.
 - Antivirus, anti-malware.
 
@@ -670,21 +670,21 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 
 ### A logistical challenge: How do you share an encryption key across an insecure medium without physically transferring the key?
 
-#### Out-of-band key exchange: Don't send the symmetric key over the net:
+### Out-of-band key exchange: Don't send the symmetric key over the net:
 - Telephone
 - Courier
 - In-person, etc.
 
-#### In-band key exchange: On the network:
+### In-band key exchange: On the network:
 - Protect the key with additional encryption.
 - Use asymmetric encryption to deliver a symmetric key.
 
-#### Real-time encryption/decryption: Share a symmetric session key using asymmetric encryption:
+### Real-time encryption/decryption: Share a symmetric session key using asymmetric encryption:
 - Client encrypts a random (symmetric) key with a server's public key.
 - The server decrypts this shared key and uses it to encrypt data.
 - This is the session key.
 
-#### Symmetric key from asymmetric keys:
+### Symmetric key from asymmetric keys:
 - Use public and private key cryptography to create a symmetric key.
 
 
@@ -747,7 +747,7 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - The message is invisible, but it's stored within the data contained within the image.
 - The covertext, the container document or file.
 
-#### Common Steganography Techniques:
+### Common Steganography Techniques:
 - **Network-based**: Embed message in TCP packets.
 - **Image-based**: Embed the message in the image itself.
 - **Invisible Watermarks**: Yellow dots on printers (machine identification code).
@@ -793,12 +793,12 @@ Many opportunities to manage versions, router configurations, Windows OS patches
   - Create a fixed-size string.
   - The result is a message digest or checksum.
 
-#### The Hash Should Be Unique
+### The Hash Should Be Unique
 - Different inputs should never create the same hash.
 - If they do, it's a **collision**.
 ![image](https://github.com/user-attachments/assets/ed896ca3-efdd-4e4a-a64d-2fab905b7c4e)
 
-#### MD5 Has a Collision Problem
+### MD5 Has a Collision Problem
 - Found in 1996.
 - **Don't use MD5 for anything important**.
 
@@ -822,11 +822,11 @@ Many opportunities to manage versions, router configurations, Windows OS patches
 - Proves the source of the message: **Authentication**.
 - Ensures the signature isn't fake: **Non-repudiation**.
 
-#### Sign with the Private Key
+### Sign with the Private Key
 - The message doesn't need to be encrypted.
 - **Nobody else can sign this**.
 
-#### Verify with the Public Key
+### Verify with the Public Key
 - Any change in the message will invalidate the signature.
 
 
@@ -1014,62 +1014,62 @@ A method used by an attacker to gain access to or infect a target. Also called a
 
 ### Types of Threat Vectors
 
-#### Message-Based Vectors
+### Message-Based Vectors
 - **Overview**: A major vector, often through phishing.
 - **Methods**:
   - **Email**: Malicious links, phishing sites.
   - **SMS (Smishing)**: Phishing attacks via text messages.
 
-#### Phishing Attacks
+### Phishing Attacks
 - **Common Forms**: Links in emails, texts, or IMs.
 - **Intent**: Often to deliver malware or engage in social engineering scams like invoice or cryptocurrency scams.
 
-#### Image-Based Vectors
+### Image-Based Vectors
 - **Difficulty**: Harder to identify threats embedded in images.
 - **Methods**:
   - **SVG Files**: Can contain HTML injections or JavaScript.
   - **XSS (Cross-Site Scripting)**: Injects malicious scripts into trusted applications.
 
-#### File-Based Vectors
+### File-Based Vectors
 - **Overview**: Malicious code hidden in files.
 - **File Types**: PDF, ZIP/RAR, and other compressed formats.
 
-#### Voice Call Vectors (Vishing)
+### Voice Call Vectors (Vishing)
 - **Methods**:
   - **Spam over IP**: High-volume automated calls.
   - **War Dialing**: Attempting to connect to multiple phone numbers.
   - **Call Tampering**: Disrupting voice calls, often as a form of DoS.
 
-#### Removable Device Vectors
+### Removable Device Vectors
 - **Device Types**: USB flash drives, among others.
 - **Risks**:
   - **Air-gapped Networks**: Can introduce malware even in isolated systems.
   - **Data Exfiltration**: Massive data extraction with zero network bandwidth.
 
-#### Vulnerable Software Vectors
+### Vulnerable Software Vectors
 - **Overview**: Security flaws in software require frequent updates.
 - **Categories**:
   - **Client-Based**: Vulnerabilities in user-installed applications.
   - **Agentless**: Compromised server software affecting all clients.
 
-#### Unsupported Systems Vector
+### Unsupported Systems Vector
 - **Risk**: Unpatched, outdated systems pose significant vulnerabilities.
 - **Solution**: Maintain an inventory and ensure all systems are up-to-date.
 
-#### Unsecure Network Vectors
+### Unsecure Network Vectors
 - **Types**:
   - **Wireless**: Outdated protocols (e.g., WEP, WPA), unsecured networks.
   - **Wired**: Lack of security measures like 802.1X.
   - **Bluetooth**: Vulnerable to reconnaissance and exploitation.
 
-#### Open Service Ports
+### Open Service Ports
 - **Risk**: Open TCP/UDP ports increase attack surface.
 - **Challenge**: Each open port presents a potential entry point.
 
-#### Default Credentials
+### Default Credentials
 - **Issue**: Default usernames and passwords can provide attackers with administrator access.
 
-#### Supply Chain Vectors
+### Supply Chain Vectors
 - **Methods**:
   - **Tampering**: Malicious alterations in manufacturing or infrastructure.
   - **Compromised Equipment**: Counterfeit or vulnerable hardware, as seen in notable breaches like the 2013 Target credit card breach and counterfeit Cisco switches in 2020.
@@ -1099,19 +1099,19 @@ Phishing is a form of social engineering and scam where attackers trick individu
 
 ### Types of Phishing
 
-#### Vishing
+### Vishing
 - **Definition**: Voice phishing conducted over the phone or voicemail.
 - **Common Tactics**:
   - **Caller ID Spoofing**: Making the call appear from a trusted source.
   - **Fake Security Checks**: Posing as bank or tech support representatives.
 
-#### Smishing
+### Smishing
 - **Definition**: SMS phishing done via text message.
 - **Common Tactics**:
   - **Spoofed Sender ID**: Messages appear to be from a trusted source.
   - **Link Forwarding**: Requests to click links or provide personal details.
 
-#### Phishing with Different Bait
+### Phishing with Different Bait
 - **Definition**: Combines phishing with other social engineering tactics.
 - **Goal**: Broaden the approach to increase the chances of success.
 
@@ -1124,12 +1124,12 @@ Impersonation occurs when an attacker pretends to be someone they are not in ord
 
 ### Tactics in Impersonation
 
-#### Eliciting Information
+### Eliciting Information
 - **Technique**: Extracting information from a target without them realizing it.
 - **Common Scenarios**: Often used in vishing, where attackers find it easier to extract information over the phone.
 - **Psychology**: Relies on well-documented psychological techniques to manipulate the victim.
 
-#### Identity Fraud
+### Identity Fraud
 - **Definition**: Using someone else’s identity for malicious purposes.
 - **Common Examples**:
   - **Credit Card Fraud**: Attacker makes purchases with your credit card or opens a new one.
@@ -1273,7 +1273,7 @@ A race condition occurs when a system or device tries to perform two or more ope
 
 One common example of a race condition vulnerability is the **TOCTOU (Time-of-Check to Time-of-Use)** attack, where an attacker manipulates the time gap between checking a resource and using it.
 
-#### How TOCTOU Works:
+### How TOCTOU Works:
   - **Check**: The system performs a check on a resource or condition.
   - **Use**: The system then proceeds based on the results of that check.
   - **Attack Window**: An attacker exploits the time gap between these steps, modifying the resource or condition after the check but before its use.
@@ -1356,12 +1356,12 @@ SQL Injection exploits vulnerabilities in applications that interact with databa
 
 ### Types of XSS Attacks
 
-#### Non-persistent (Reflected) XSS Attack
+### Non-persistent (Reflected) XSS Attack
 - In a reflected XSS attack, the website allows scripts to run in user inputs, such as search boxes or form fields.
 - The attacker sends a malicious link to the victim, which, when clicked, runs a script that can send the victim's credentials, session IDs, or cookies to the attacker.
 - The script is embedded in the URL and executes in the victim's browser, often without the victim knowing.
   
-#### Persistent (Stored) XSS Attack
+### Persistent (Stored) XSS Attack
 - In a persistent XSS attack, the attacker posts a message containing a malicious payload to a website, such as a social network.
 - This attack is "persistent" because it affects anyone who visits the page with the malicious payload.
 - The malicious script can propagate rapidly, especially on social networks, as the payload gets shared when users interact with the message.
@@ -1382,11 +1382,11 @@ Hardware vulnerabilities refer to inherent weaknesses in the architecture of har
 
 ### Key Concepts
 
-#### Firmware
+### Firmware
 - Firmware is the software that resides inside hardware devices, often referred to as the operating system of the device.
 - Vendors are typically the only ones who can fix hardware vulnerabilities, provided they are aware of the issue.
 
-#### End-of-Life (EOL)
+### End-of-Life (EOL)
 - **End-of-life (EOL)** refers to when a manufacturer stops selling a product.
 - Even after EOL, the manufacturer may continue supporting the product for a period.
 - **End-of-service life (EOSL)** occurs when the manufacturer stops selling a product, and support is no longer available.
@@ -1397,7 +1397,7 @@ Hardware vulnerabilities refer to inherent weaknesses in the architecture of har
 - **EOSL** is a significant security concern, especially for legacy platforms. Without continued support or security patches, devices become vulnerable to new exploits.
 - Manufacturers typically release security patches as part of normal operations, but this ends once the device reaches EOSL.
 
-#### Legacy Platforms
+### Legacy Platforms
 - A legacy platform is a device running an older operating system, outdated applications, or old middleware without current updates.
 - These devices may be at risk due to their use of outdated systems, often at EOL or EOSL.
 - Devices running legacy platforms require additional security protections, such as more stringent firewall rules and updated intrusion prevention signatures, to mitigate the risks associated with outdated software.
@@ -1408,12 +1408,12 @@ Virtualization vulnerabilities share similarities with physical machine vulnerab
 
 ### Key Concepts
 
-#### Virtual Machine Escape Protection
+### Virtual Machine Escape Protection
 - **Virtual machine escape** occurs when an attacker breaks out of the virtual machine (VM) and interacts with the host operating system or hardware.
 - If an attacker successfully escapes the VM, they gain significant control over the host system, which represents a huge security exploit.
 - Protecting against VM escape is critical to maintaining the security of both the virtual and host environments.
 
-#### Resource Reuse
+### Resource Reuse
 - The **hypervisor** manages the relationship between the physical and virtual resources, such as available RAM, storage space, and CPU availability.
 - However, resources can be inadvertently shared between virtual machines (VMs), which may lead to security risks.
 - For example, data from one VM could accidentally be accessed or shared with another, creating opportunities for attacks if not properly managed.
@@ -1749,14 +1749,14 @@ Another form of on-path attack is the **on-path browser attack**, where malware 
 
 A **replay attack** is when a valid data transmission is intercepted and maliciously or fraudulently repeated or delayed. The attacker captures the data, retransmits it, and may even modify it before sending it again. 
 
-#### Attack Process:
+### Attack Process:
 1. **Interception of Data**: The attacker captures the original data transmission.
 2. **Modification and Retransmission**: The attacker may alter the data before sending it again.
 3. **Authentication Bypass**: If the data contains authentication information, the attacker can bypass security measures.
 
 To carry out this attack, the attacker needs access to raw network data, which could be obtained through methods like **network taps**, **ARP poisoning**, or **malware on the victim’s system**.
 
-#### Pass the Hash (PtH) Attack:
+### Pass the Hash (PtH) Attack:
 In a **Pass the Hash** attack, an attacker captures the hashed version of a password and uses it to authenticate to a remote server or service.
 
 **Steps involved**:
@@ -1769,13 +1769,13 @@ In a **Pass the Hash** attack, an attacker captures the hashed version of a pass
 - **Encryption**: Protecting the transmission of passwords with encryption can prevent hash capture.
 - **Session IDs**: Using session identifiers for authentication reduces reliance on password hashes.
 
-#### Browser Cookies:
+### Browser Cookies:
 Cookies store information on your browser for tracking, session management, and personalization. While not inherently executable, they present a **privacy risk** if stolen by attackers. They are typically not a direct security threat unless the attacker can access them.
 
-#### Session Hijacking (Sidejacking):
+### Session Hijacking (Sidejacking):
 Session hijacking, or **sidejacking**, occurs when an attacker intercepts a session ID to impersonate the user. This can happen if the session ID is not properly encrypted or protected.
 
-#### Header Manipulation:
+### Header Manipulation:
 Attackers may manipulate HTTP headers to modify or hijack sessions.
 
 **Preventing Session Hijacking**:
@@ -1788,7 +1788,7 @@ Attackers may manipulate HTTP headers to modify or hijack sessions.
 
 Malicious code refers to software or scripts used by attackers to exploit vulnerabilities, gain unauthorized access, or cause damage to systems. This can include techniques such as **social engineering**, **default credentials**, or exploiting **misconfigurations**, which may not require advanced technical skills but still pose serious risks to even well-secured systems.
 
-#### What is Malicious Code?
+### What is Malicious Code?
 Malicious code is any software or code that an attacker uses to gain access to a system or exploit its vulnerabilities. This can include:
 - **Executable files**
 - **Scripts**
@@ -1796,14 +1796,14 @@ Malicious code is any software or code that an attacker uses to gain access to a
 - **Worms**
 - **Trojan horses**
 
-#### Protection Against Malicious Code:
+### Protection Against Malicious Code:
 Defense against malicious code requires multiple layers of security, including:
 - **Anti-malware software**
 - **Firewalls**
 - **Continuous software updates and patches**
 - **Secure computing habits**
 
-#### Example: WannaCry Ransomware
+### Example: WannaCry Ransomware
 One notable example is **WannaCry**, a ransomware attack that exploited a vulnerability in **Windows SMBv1**. The malicious executable allowed arbitrary code execution, enabling the malware to spread rapidly across networks, encrypting files and demanding ransom.
 
 Malicious code is often opportunistic, and while systems may be well-secured, it's essential to maintain proactive security measures and vigilance.
@@ -1812,13 +1812,13 @@ Malicious code is often opportunistic, and while systems may be well-secured, it
 
 Application attacks target vulnerabilities in software programs and web applications, exploiting weaknesses in the code or design. These attacks can lead to serious security breaches, allowing attackers to gain unauthorized access, execute arbitrary code, or manipulate data.
 
-#### Code Injection
+### Code Injection
 Code injection occurs when attackers add malicious code into an application's input fields, which the program then processes. This is often enabled by poor programming practices that fail to properly handle input and output.
 
 - **Common injection types**: HTML, SQL, XML, LDAP, etc.
 - **Risk**: Allows attackers to execute unintended commands or alter the application's behavior.
 
-#### Buffer Overflow
+### Buffer Overflow
 A buffer overflow happens when a program writes more data to a buffer than it can handle. Buffers are temporary storage areas for data, and when data exceeds the buffer's size, it can overwrite adjacent memory, leading to crashes or exploitable conditions.
 
 - **Consequences**: Crashes, arbitrary code execution, data corruption, and security bypass.
@@ -1829,7 +1829,7 @@ A buffer overflow happens when a program writes more data to a buffer than it ca
   - **Data Execution Prevention (DEP)**: Mark certain memory areas as non-executable to block injected code.
   - **Static and Dynamic Analysis**: Use tools to detect and fix vulnerabilities in code.
 
-#### Privilege Escalation
+### Privilege Escalation
 Privilege escalation occurs when attackers gain higher levels of access to a system by exploiting bugs, design flaws, or vulnerabilities, allowing them to perform actions normally restricted to privileged users.
 
 - **Mitigation**: 
@@ -1838,7 +1838,7 @@ Privilege escalation occurs when attackers gain higher levels of access to a sys
   - **Block known exploits**: Prevent known vulnerabilities from being exploited.
   - **DEP & ASLR**: Protect memory and prevent unauthorized code execution.
 
-#### Cross-Site Request Forgery (CSRF)
+### Cross-Site Request Forgery (CSRF)
 Cross-Site Request Forgery (CSRF) tricks a user’s browser into executing unwanted actions on a different website where the user is authenticated. The attacker exploits the trusted relationship between the user’s browser and the website.
 
 - **Risk**: Unauthorized actions, such as transferring funds or posting content, on behalf of the user.
@@ -1846,7 +1846,7 @@ Cross-Site Request Forgery (CSRF) tricks a user’s browser into executing unwan
   - **Anti-forgery tokens**: Use cryptographic tokens to ensure requests come from trusted sources.
   - **User validation**: Check that each request is valid and originates from a legitimate source.
 
-#### Directory Traversal / Path Traversal
+### Directory Traversal / Path Traversal
 Directory traversal, or path traversal, allows attackers to access files and directories on a server that are outside the scope of the website’s directory. This could give them access to sensitive files, such as configuration files.
 
 - **Risk**: Attackers can browse directories beyond the web server's root, potentially accessing critical system files.
@@ -1858,7 +1858,7 @@ Directory traversal, or path traversal, allows attackers to access files and dir
 
 Cryptographic attacks aim to break the security of encrypted data, often exploiting weaknesses in how cryptographic algorithms or protocols are implemented. While encryption itself is a powerful tool for securing data, poor implementation or outdated protocols can make it vulnerable.
 
-#### Birthday Attack
+### Birthday Attack
 A **birthday attack** targets hash functions by exploiting the probability of finding two different inputs that produce the same hash value, known as a **collision**. This attack is named after the "birthday paradox," which shows that it’s easier to find two matching items (like birthdays) than most expect.
 
 - **Steps**:
@@ -1872,10 +1872,10 @@ A **birthday attack** targets hash functions by exploiting the probability of fi
   - Regularly update cryptographic algorithms.
   - Choose hash functions with a larger output size to reduce collision probability.
 
-#### Collisions
+### Collisions
 A **collision** occurs when two different pieces of data produce the same hash. Since hash functions are meant to be unique, a collision undermines the integrity of the hash and potentially the security of the data.
 
-#### Downgrade Attack
+### Downgrade Attack
 A **downgrade attack** forces a system to use an older, less secure version of a software or communication protocol, weakening the overall security. This is often done by exploiting legacy support or intentionally manipulating the version negotiation process.
 
 - **Examples**:
@@ -1978,11 +1978,11 @@ Attackers often remove or alter logs to cover their tracks, making it harder to 
 
 - **What It Indicates**: Missing logs such as authentication logs, file access logs, or firewall logs can suggest that an attacker is trying to erase their activity. Monitoring and securing logs is critical.
 
-### 2.5 Segmentation and Access Control
+# 2.5 Segmentation and Access Control
 
 **Segmentation** is a technique used to isolate and secure different parts of a network or system. It is done for several reasons, including improving performance for high-bandwidth applications, enhancing security, and ensuring compliance with regulations.
 
-#### Physical Segmentation
+### Physical Segmentation
 This involves using separate physical devices and infrastructure to create isolated segments within a network or system.
 - **Dedicated Hardware**: Different segments are maintained on separate physical hardware such as routers, switches, and cables.
 - **Complete Isolation**: Physical separation ensures that segments are entirely isolated, without shared components.
@@ -1990,7 +1990,7 @@ This involves using separate physical devices and infrastructure to create isola
   
 **Example**: A corporate network where the finance department has its own dedicated server, switch, and cabling, separate from the other departments.
 
-#### Logical Segmentation
+### Logical Segmentation
 Logical segmentation divides a network into smaller segments using software and network configurations.
 - **VLANs**: This is often achieved by using Virtual Local Area Networks (VLANs), which partition a single physical network into multiple logical networks.
 - **Access Control**: Traffic between segments is controlled by network devices such as switches and routers that manage traffic based on defined policies.
@@ -1998,7 +1998,7 @@ Logical segmentation divides a network into smaller segments using software and 
   
 **Example**: A university network that separates student, faculty, and administrative traffic using VLANs on the same physical network infrastructure.
 
-#### Virtual Segmentation
+### Virtual Segmentation
 Virtual segmentation creates isolated virtual environments within a single physical host, typically through virtualization technologies.
 - **Virtual Machines (VMs)**: Multiple VMs can run on a single physical server, each with its own operating system and applications, isolated from each other.
 - **Hypervisors**: A hypervisor manages the creation and operation of VMs, ensuring proper isolation and resource allocation.
@@ -2006,7 +2006,7 @@ Virtual segmentation creates isolated virtual environments within a single physi
   
 **Example**: A cloud service provider hosts multiple virtual servers for different customers on the same physical hardware, using VMs and virtual networks to ensure data and application isolation.
 
-#### Access Control Lists (ACLs)
+### Access Control Lists (ACLs)
 ACLs are used to control traffic by specifying which users or devices can access specific resources and under which conditions.
 - **Restrictions**: ACLs allow traffic based on criteria like source IP, destination IP, port numbers, application types, and even time of day.
 - **Risk**: Careful planning is needed when creating ACLs, as improper configuration can lock users or administrators out of critical systems.
@@ -2018,7 +2018,7 @@ ACLs are used to control traffic by specifying which users or devices can access
 
 Many operating systems use ACLs to manage access to files, directories, and network resources.
 
-#### Application Allow/Deny Lists
+### Application Allow/Deny Lists
 Security policies can use allow and deny lists to control application execution.
 
 - **Allow List**: Only applications that are explicitly approved can run. This method is very restrictive but offers high security.
@@ -2030,99 +2030,99 @@ Security policies can use allow and deny lists to control application execution.
 - **Path**: Only applications located in designated folders can be executed.
 - **Network Zone**: Applications can only run if they are located within a specific network zone.
 
-### 2.5 Mitigation Techniques
+# 2.5 Mitigation Techniques
 
 Mitigation techniques refer to the strategies and processes used to reduce the impact of security events or potential security breaches.
 
-#### Patching
+### Patching
 Patching is crucial for maintaining system stability and applying security fixes to vulnerabilities.
 - **Monthly Updates**: Regular, incremental updates that address known security issues.
 - **Third-Party Updates**: Updates for third-party applications, device drivers, and software components.
 - **Auto-Update**: While convenient, it is not always the best option due to potential compatibility issues or unexpected outcomes.
 - **Emergency Out-of-Band Updates**: Critical security patches that are applied outside of the regular update schedule, often to address zero-day vulnerabilities or high-severity threats.
 
-#### Encryption
+### Encryption
 Encryption ensures that unauthorized parties cannot access application data or files.
 - **File-Level Encryption**: Encrypts specific files using technologies like EFS (Encrypted File System).
 - **Full Disk Encryption (FDE)**: Encrypts the entire contents of a disk, such as using BitLocker (Windows) or FileVault (macOS).
 - **Application Data Encryption**: Managed by the application itself, this protects stored data from unauthorized access.
 
-#### Monitoring
+### Monitoring
 Monitoring involves collecting data from various devices and systems to detect potential security events.
 - **Built-In Technology**: Many devices come with built-in logging and monitoring capabilities.
 - **Integrated Into Servers**: Servers often include sensors, IPS (Intrusion Prevention Systems), firewall logs, authentication logs, and more.
 - **Collectors and Consoles**: Data aggregation tools such as SIEM (Security Information and Event Management) consoles, syslog servers, and proprietary tools help consolidate and analyze logs.
 - **Correlation Engines**: Many SIEM systems include correlation engines that compare data from diverse sensors to identify unusual patterns.
 
-#### Least Privilege
+### Least Privilege
 The principle of least privilege dictates that users should only have the minimum permissions necessary to perform their tasks.
 - **Minimal User Rights**: User accounts should be restricted to only the permissions required for their role.
 - **Application Privileges**: Applications should run with the least privileges, and administrative rights should be granted sparingly.
 - **Limiting Malicious Behaviour**: Restricting administrative privileges limits the scope of any potential damage caused by malicious actions.
 
-#### Configuration Enforcement
+### Configuration Enforcement
 Ensures that devices meet security requirements before being allowed access to the network.
 - **Posture Assessment**: Devices are assessed for compliance each time they connect to the network, checking factors like OS patch levels, EDR (Endpoint Detection and Response) versions, and firewall status.
 - **Compliance Checks**: Systems that do not meet the required configuration are quarantined, often in a private VLAN with limited access.
 - **Recheck After Corrections**: Devices that were initially out of compliance are rechecked after corrections have been made to ensure they meet the security standards.
 
-#### Decommissioning
+### Decommissioning
 Proper decommissioning is critical to prevent data leakage or unauthorized access to sensitive information.
 - **Data Removal**: Sensitive data should be completely removed from devices before decommissioning, especially from storage devices like HDDs, SSDs, and USB drives.
 - **Device Reuse**: If devices are recycled for use in other systems, all data must be wiped or destroyed to ensure confidentiality.
 - **Device Disposal**: Devices should be securely wiped and destroyed to prevent unauthorized recovery of any data.
 
-### 2.5 Hardening Techniques
+# 2.5 Hardening Techniques
 
 Hardening techniques involve strengthening systems to minimize vulnerabilities and reduce the likelihood of successful attacks.
 
-#### System Hardening: Server
+### System Hardening: Server
 To secure a server, various hardening practices should be followed:
 - **Updates**: Regularly apply operating system updates, service packs, and security patches to fix known vulnerabilities.
 - **User Accounts**: Enforce policies for minimum password lengths and complexity, as well as restrictions on account usage and login attempts.
 - **Network Access**: Limit network access to only necessary services, reducing the attack surface.
 - **Monitoring and Security**: Deploy anti-virus, anti-malware tools, and continuously monitor system activity for potential threats.
 
-#### Encryption
+### Encryption
 Encryption helps prevent unauthorized access to data and communication:
 - **File System Encryption**: Encrypt sensitive files using built-in tools like EFS (Encrypting File System) on Windows.
 - **Full Disk Encryption (FDE)**: Tools like BitLocker (Windows) and FileVault (macOS) encrypt entire disk drives, securing data even if the device is lost or stolen.
 - **Network Communication Encryption**: Encrypt all network traffic with a VPN and encrypt application data to ensure confidentiality during transmission.
 
-#### The Endpoint
+### The Endpoint
 The endpoint is the user’s access point to systems, applications, and data. Protecting endpoints is crucial for a layered security approach:
 - **Defense in Depth**: Implement multiple layers of security, from hardware to software, to protect the endpoint from various threats.
 
-#### Endpoint Detection and Response (EDR)
+### Endpoint Detection and Response (EDR)
 EDR provides advanced protection to endpoints by detecting, investigating, and responding to security incidents:
 - **Threat Detection**: EDR systems use signatures, behavioral analysis, and machine learning to detect threats. They go beyond traditional signature-based detection.
 - **Root Cause Analysis**: Investigate incidents to determine how an attack occurred and its impact.
 - **Automated Response**: EDR systems can automatically isolate affected systems, quarantine threats, and roll back changes without user or technician intervention.
 
-#### Host-Based Firewall
+### Host-Based Firewall
 A host-based firewall runs on individual endpoints and controls application-level traffic:
 - **Traffic Control**: It allows or denies incoming and outgoing traffic based on application processes.
 - **Malware Prevention**: It can identify and block unknown processes, potentially stopping malware before it can execute.
 - **Centralized Management**: These firewalls can be managed centrally to enforce consistent security policies across endpoints.
 
-#### Host-Based Intrusion Prevention System (HIPS)
+### Host-Based Intrusion Prevention System (HIPS)
 HIPS helps detect and block known attacks by securing the OS and application configurations:
 - **Signature-Based Detection**: Uses predefined signatures to identify and block known threats.
 - **Heuristic and Behavioral Analysis**: Identifies abnormal behavior and potential attacks based on patterns rather than known signatures.
 - **Protection**: Can detect buffer overflows, unauthorized registry updates, and file modifications to sensitive areas of the OS.
 
-#### Open Ports and Services
+### Open Ports and Services
 Every open port is a potential entry point for an attacker:
 - **Limit Open Ports**: Only keep necessary ports open and control access to them using firewalls, including Next-Generation Firewalls (NGFWs).
 - **Service Management**: Disable unused or unnecessary services, which may come pre-installed with the OS or third-party applications.
 - **Port Scanning**: Use tools like Nmap to identify open ports and services, ensuring no unnecessary services are exposed.
 
-#### Default Password Changes
+### Default Password Changes
 Many devices come with default management interfaces and passwords:
 - **Change Default Credentials**: Always change default passwords for network devices, critical systems, and applications.
 - **Add Extra Security**: Implement additional authentication measures and strong passwords to increase security.
 
-#### Removal of Unnecessary Software
+### Removal of Unnecessary Software
 Removing unneeded software reduces the attack surface:
 - **Software Management**: Unused software can introduce security vulnerabilities through bugs and unpatched exploits.
 - **Risk Reduction**: By removing unnecessary software, you reduce the number of vulnerabilities and simplify patch management.
