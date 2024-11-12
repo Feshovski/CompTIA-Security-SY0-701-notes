@@ -2219,6 +2219,102 @@ Monolithic applications involve one big application that does everything, contai
 - **Resilient**: Outages are contained
 - **Security and Compliance**: Containment is built-in
 
+# 3.1 Network Infrastructure
+
+### Physical Isolation
+Physical isolation involves separating devices so that if an attacker gains access to one part of the network, they cannot access other parts. For example:
+- Web servers in one rack, database servers in another rack, with an air gap between different services.
+- Customer A on switch 1 and Customer B on switch 2, ensuring no opportunity for mixing data.
+
+![image](https://github.com/user-attachments/assets/1bf2139d-74d9-42f2-99fd-4104e4b0bc21)
+
+
+### Logical Segmentation with Virtual Local Area Networks (VLANs)
+Logical segmentation involves separating networks at the data link layer rather than physically. Devices in different VLANs cannot communicate with each other unless routed through a layer 3 device, such as a router.
+
+### Software Defined Networking (SDN)
+SDN is a network architecture that decouples the control plane from the data plane, making the network more flexible and easier to manage.
+
+#### Key Components of SDN:
+- **Data Plane**: Handles the forwarding of data packets, including functions like encryption, trunking, NAT, and more.
+- **Control Plane**: Manages routing tables and determines the path that data should take through the network. It controls the data plane's behavior by updating session, routing, and NAT tables.
+- **Management Plane**: This layer allows for the configuration and management of network devices, influencing the control plane, which in turn adjusts the data plane.
+
+### Layers of SDN:
+1. **Infrastructure Layer / Data Plane**: Responsible for forwarding data, such as network frames and packets. Includes tasks like forwarding, trunking, and encryption.
+2. **Control Layer / Control Plane**: Manages the network's routing and session tables and updates dynamic routing protocols.
+3. **Application Layer / Management Plane**: Provides the configuration and management of network devices, which then influence the actions of the control and data planes.
+
+![image](https://github.com/user-attachments/assets/03575fb3-ba8d-4051-b45f-11fe1fdab392)
+![image](https://github.com/user-attachments/assets/9511ca12-5c49-4c1c-87dc-bd6044b56c63)
+
+# 3.1 Other Infrastructure Concepts
+
+### IT Security Categories
+IT security is generally divided into two main categories:
+- **On-premises data**: Data stored and managed within the organization’s own infrastructure.
+- **Cloud-based data**: Data stored and managed by a third-party provider in a cloud environment.
+
+### Cloud-based Security
+Cloud-based security is centralized, making it cost-effective:
+- No need for dedicated hardware or a physical data center to secure.
+- Third-party providers handle all security and infrastructure management.
+
+### On-premises Security
+On-premises security places the responsibility on the client:
+- The organization must manage and secure its data center infrastructure.
+- Offers more control over security but requires significant resources.
+
+#### Customizing Security Posture:
+- Full control when security and data are kept in-house.
+- An on-site IT team can better manage security but may be expensive and challenging to staff.
+- Local teams can maintain uptime and availability with regular checks and direct support, but security changes might take time and incur additional costs.
+
+### Centralised vs Decentralised Security Management
+Organizations often operate in a physically decentralised manner, spanning multiple locations or cloud services. Managing such a diverse network of systems can be challenging. A **centralised approach** provides several benefits:
+- Consolidated security management from a single console.
+- Correlated alerts and log analysis, offering a comprehensive view of system status.
+- Maintenance patching and monitoring of users, devices, and applications.
+- Potential downsides include a single point of failure, performance issues, and additional resource requirements like storage and CPU power.
+
+### Virtualisation
+Virtualisation enables the running of multiple operating systems on a single hardware unit:
+- Each virtual machine operates independently with its own OS.
+- Although it allows better resource utilization, it can add overhead and complexity, making virtualisation relatively expensive.
+
+### Application Containerisation
+Application containerisation allows multiple applications to run simultaneously on the same hardware, with each isolated in its own container:
+- Applications are self-contained, preventing interaction between them.
+- Containers use a standard image format and the host system’s kernel, ensuring secure separation between applications.
+- Containers include everything needed to run an application: code, libraries, and dependencies.
+![image](https://github.com/user-attachments/assets/370db21c-b591-4955-9c15-e6af10a4eeb8)
+-----------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/a4b01691-dec3-4051-ab33-b24bad70e8a6)
+
+
+### Internet of Things (IoT)
+The **Internet of Things (IoT)** refers to devices connected to the network for various purposes:
+- **Examples**: Sensors, smart devices (e.g., thermostats, doorbells), wearables (smartwatches), and facility automation (temperature, air quality).
+- Security concerns arise from weak default settings as IoT manufacturers may not prioritize security.
+
+### SCADA / ICS (Supervisory Control and Data Acquisition / Industrial Control Systems)
+Large-scale systems used to manage industrial processes:
+- **SCADA/ICS systems**: Used in power generation, refining, manufacturing, energy, and logistics.
+- **Distributed Control Systems**: Provide real-time information and control within industrial environments.
+- Requires **extensive segmentation** to ensure there is no access from external sources.
+
+### RTOS (Real-Time Operating System)
+An **RTOS** is an operating system designed for deterministic processing:
+- Critical in industries such as **automotive**, **military**, and **industrial control systems** where processes must be completed within strict time constraints.
+- Security concerns are amplified because RTOS systems must always be available, and knowing what security measures are in place can be difficult.
+
+### Embedded Systems
+**Embedded systems** are hardware and software designed for specific tasks:
+- Used in devices like **traffic lights**, **digital watches**, and **medical imaging systems**.
+- Highly focused on their task but may lack flexibility and have limited security features.
+
+### High Availability
+High availability systems are critical to ensuring continuous operation, particularly in environments requiring minimal downtime.
 
 
 </details>
