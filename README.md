@@ -2130,7 +2130,97 @@ Removing unneeded software reduces the attack surface:
 
 <details>
 <summary>3.0 Security Architecture</summary>
- 
+
+# 3.1 Cloud Infrastructure
+
+The Cloud Responsibility Matrix, also known as the shared responsibility model, outlines the division of responsibilities between a Cloud Service Provider (CSP) and its customers.
+
+### Summary:
+- **IaaS**: Virtualised computing resources
+- **PaaS**: Platform for application development
+- **SaaS**: Ready-to-use software applications
+
+![image](https://github.com/user-attachments/assets/d82b1dd2-60bd-4ced-a55a-7b3bd83dca02)
+
+
+### Infrastructure as a Service (IaaS)
+IaaS provides virtualised computing resources over the internet, offering fundamental building blocks like virtual machines, storage, and networking, allowing users to run their own applications and operating systems.
+
+#### Key Characteristics:
+- **Resources**: Virtual machines, storage, networks, and load balancers
+- **User Control**: Users have maximum control over the infrastructure, including the OS, storage, and deployed applications
+- **Scalability**: Easily scalable resources as needed, without the need for physical hardware
+- **Cost**: Pay-as-you-go pricing model, users pay for the resources they use.
+
+#### Examples:
+- Amazon Web Services (EC2)
+- Microsoft Azure Virtual Machines
+- Google Cloud Compute Engine
+
+### Platform as a Service (PaaS)
+PaaS provides a platform allowing customers to develop, run, and manage applications without dealing with the underlying infrastructure. It includes services for application development, deployment, and testing.
+
+#### Key Characteristics:
+- **Resources**: Middleware, development tools, database management systems, and more
+- **User Control**: Users manage the applications and data while the provider manages the infrastructure and platform
+- **Development Focus**: Streamlines the development process by providing pre-configured environments and tools
+- **Scalability**: Automatically manages scaling of the underlying infrastructure
+
+#### Examples:
+- Google App Engine
+- Microsoft Azure Services
+- Heroku
+
+### Software as a Service (SaaS)
+SaaS delivers software applications over the internet on a subscription basis. Users can access these applications through web browsers, and the service provider manages all underlying infrastructure and platforms.
+
+#### Key Characteristics:
+- **Resources**: Software applications delivered over the internet
+- **User Control**: Users interact with the application itself, with no control over the underlying infrastructure or platform
+- **Convenience**: Ready-to-use applications that require no installation or maintenance by the user
+- **Accessible**: From any device with an internet connection
+
+#### Examples:
+- Google Workspace
+- Microsoft Office 365
+- Salesforce
+
+### Hybrid Considerations
+A hybrid cloud involves more than one public or private cloud, which adds an additional level of complexity:
+- **Network Protection Mismatches**: Authentication across platforms, firewall configurations, server settings, etc.
+- **Different Security Monitoring**: Logs are diverse and cloud-specific
+- **Data Leakage**: Data is shared across the public internet
+
+### Third-party Vendors in the Cloud
+Third-party vendors provide various services and solutions that complement or extend the capabilities of primary cloud service providers. They offer specialised services, tools, and applications that enhance functionality, security, and management of cloud environments.
+
+### Serverless Architecture
+Serverless refers to a cloud-native development model that allows developers to build and run applications and services without needing to manage infrastructure or server-side IT.
+
+#### Key Characteristics:
+- **No Server Management**
+- **Event-Driven**
+- **Auto-Scaling**
+- **Pay-Per-Use**
+- **Stateless**
+
+#### Examples:
+- Microservices: Breaking down applications into smaller, independent functions that can be developed, deployed, and scaled separately.
+- Real-time File Processing: Automatically processing files when they are uploaded to a storage service
+- API Backends: Building lightweight, scalable backends for mobile or web applications
+- IoT Data Processing: Processing data from IoT devices in real-time
+- Automation and Orchestration
+
+### Microservices and APIs
+Monolithic applications involve one big application that does everything, containing all decision-making processes, business logic, data input/output, etc. This creates challenges with a large codebase and change control.
+
+#### APIs:
+- **Scalable**: Scale only the microservices you need
+- **Resilient**: Outages are contained
+- **Security and Compliance**: Containment is built-in
+
+
+
 </details>
 
 <details>
