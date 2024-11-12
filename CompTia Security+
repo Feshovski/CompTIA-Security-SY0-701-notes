@@ -18,17 +18,14 @@ Exam Specifications:
 - 90 minute exam, maximum of 90 questions
 - Passing score: 750 on a scale of 100-900
 
-Domain	% of Exam
+| Domain                                           | % of Exam |
+|--------------------------------------------------|-----------|
+| 1.0 - General Security Concepts                  | 12%       |
+| 2.0 - Threats, Vulnerabilities, and Mitigations  | 22%       |
+| 3.0 - Security Architecture                      | 18%       |
+| 4.0 - Security Operations                        | 28%       |
+| 5.0 - Security Program Management and Oversight  | 20%       |
 
-1.0 - General Security Concepts	12%
-
-2.0 - Threats, Vulnerabilities, and Mitigations	22%
-
-3.0 - Security Architecture	18%
-
-4.0 - Security Operations	28%
-
-5.0 - Security Program Management and Oversight	20%
 
 **Multiple Choice**
 
