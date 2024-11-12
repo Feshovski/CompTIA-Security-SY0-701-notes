@@ -2,9 +2,15 @@
 
 Hi All, I completed my exam on the 16th of August 2024 after roughly a month of self study. I used a range of resources found on [O'Reilly ](https://www.oreilly.com/), ranging from the [certification guide](https://www.oreilly.com/library/view/comptia-security-sy0-701/9781835461532/), a video course by [Sari Green](https://www.oreilly.com/library/view/comptia-security-sy0-701/9780138251062/) and [practice exams.](https://www.oreilly.com/library/view/comptia-security-sy0-701/9780138225568/) 
 
-ProfesserMesser's [YouTube Playlist, CompTIA SY0-701 Security+ Training Course ](https://www.youtube.com/playlist?list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv) was my main study resource where most of my notes were derived from, I used other tools to help me better understand concepts I was struggling to understand. 
+ProfesserMesser's [YouTube Playlist, CompTIA SY0-701 Security+ Training Course ](https://www.youtube.com/playlist?list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv) was my main study resource where most of my notes were derived from, I used other tools to help me better understand concepts I was struggling with. 
 
-[Free labs](https://www.101labs.net/comptia-security/) I used to help wrap my head around some concepts**note that you will need your own VM with a Linux distro installed to complete these.**
+I used [Free labs](https://www.101labs.net/comptia-security/) for hands on practical experience a day before taking my exam.**(Note that you will need your own VM with a Linux distro installed to complete these.)**
+
+I made flash cards to help me memorise the most common TCP/UDP and their uses: 
+TCP Ports: 20/21, 22, 23, 63, 80,110, 143, 443, 445, 3389
+UDP Ports: 53, 67/68, 69, 88, 636 89/990, 993, 995, 6154 
+
+My final and honestly most useful study resource was actually a [Reddit post](https://www.reddit.com/r/CompTIA/comments/zkjs1d/how_a_dumdum_like_me_passed_sec/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 I am a full time student in Australia and was able to get a **50% voucher** after emailing CompTia and verifying my student status.
 
@@ -2315,6 +2321,708 @@ An **RTOS** is an operating system designed for deterministic processing:
 
 ### High Availability
 High availability systems are critical to ensuring continuous operation, particularly in environments requiring minimal downtime.
+
+# 3.1 Infrastructure Considerations
+
+### Availability
+Availability refers to system uptime, which is crucial for accessing data and completing transactions:
+- Ensures systems are accessible but only to authorized users.
+- It is a foundation of IT security.
+- A balancing act between making systems available while maintaining security.
+- A significant investment in monitoring and redundant systems is necessary to maintain availability.
+
+### Resilience
+Resilience refers to the ability to recover from failures and continue operating:
+- Focus on how quickly the system can recover if something breaks.
+- Address the root cause of the issue.
+- Important factors include the installation of replacement hardware, software patch availability, and redundant systems.
+- **MTTR** (Mean Time to Repair) is a key metric for recovery efficiency.
+
+### Cost
+The cost of maintaining infrastructure is an important consideration:
+- Initial installation costs.
+- Ongoing maintenance costs, including annual operational expenses.
+- Replacement and repair costs, which may require extra resources.
+- Considerations between operating vs capital expenses, including tax implications.
+
+### Responsiveness
+Responsiveness is critical, particularly for interactive applications:
+- The speed at which a system can respond to user requests is important.
+- Speed is a key metric, and the performance of all components in an application contributes to this.
+- There is always a potential "weakest link" that can hinder responsiveness.
+
+### Scalability
+Scalability refers to the ability to adjust capacity to meet demand:
+- The ability to scale up or down efficiently, also known as **elasticity**.
+- Security monitoring must also scale with the system to maintain protection as the infrastructure grows or shrinks.
+
+### Ease of Deployment
+Deploying applications involves managing multiple components:
+- Key elements include web servers, databases, caching servers, and firewalls.
+- Deployment may require managing hardware resources, cloud budgets, and orchestrating automation or change control processes.
+
+### Risk Transference
+Risk transference involves transferring some of the risks to third parties:
+- **Cybersecurity Insurance**: Covers losses from attacks, such as ransomware, and mitigates the cost of downtime and legal issues.
+- Insurance can help recover internal losses, such as those resulting from business downtime, and reduce costs associated with legal proceedings.
+
+### Ease of Recovery
+Recovery from failures is an essential part of infrastructure resilience:
+- **Malware Infection**: In case of infection, quickly reload the operating system from the original media (1 hour) or reload the corporate image (10 minutes).
+- The quicker the recovery, the less impact it has on business operations.
+
+### Patch Availability
+Regular patching is crucial for maintaining security and software health:
+- Software is rarely static; it requires bug fixes, security updates, etc.
+- Ensure systems are running the latest version, typically checked after installation.
+- Companies with regular patching schedules (like Microsoft's monthly updates) are more secure than those who rarely patch.
+
+### Inability to Patch
+Some devices, such as embedded systems, may be difficult or impossible to update:
+- Systems like HVAC controls or time clocks may not allow end-user updates.
+- Security risks may arise, and additional security measures like firewalls may be necessary to protect these systems.
+
+### Power
+Power is a foundational requirement for infrastructure:
+- Data centers and office buildings have different power needs.
+- Primary power is supplied by one or more providers, and backup services include **UPS** (Uninterruptible Power Supply) and generators.
+
+### Compute
+Compute resources perform the processing and data handling tasks:
+- Compute engines may be limited to a single processor or spread across multiple CPUs.
+- The use of multiple CPUs across clouds adds complexity but provides enhanced scalability.
+
+# 3.2 Secure Infrastructures
+
+### Device Placement
+Every network is unique, but common principles can be applied to enhance security. Placement of devices within the network plays a crucial role in securing infrastructure:
+- Firewalls: Separate trusted networks from untrusted networks, ensuring controlled communication.
+- Honeypots, jump servers, load balancers, and sensors can create a more secure computing environment by trapping or redirecting potential attackers and balancing traffic loads.
+
+![image](https://github.com/user-attachments/assets/64e71a5c-1f12-4bb0-909b-4ca496168b7d)
+
+
+### Security Zones
+Zone-based security technologies provide more flexibility and security than traditional IP address-based ranges. Each area of the network is associated with a specific zone:
+- Trusted Zone: Includes internal networks or systems that are trusted and protected.
+- Untrusted Zone: External networks or systems, such as the internet, that pose higher security risks.
+- Internal Zone: The internal corporate network or systems.
+- External Zone: External connections that require filtering or inspection.
+- Screened Zone: A monitored area used for special security controls.
+
+This zoning model simplifies security policies:
+- **Trusted to Untrusted**: Communications allowed from trusted zones to untrusted zones.
+- **Untrusted to Screened**: Communications from untrusted zones to a screened zone are filtered and monitored.
+- **Untrusted to Trusted**: Prevents or tightly controls communications from untrusted zones to trusted zones.
+
+### Attack Surface
+The attack surface is the total set of vulnerabilities in a system or network that could be exploited by attackers:
+- **Application Code**: Flaws or vulnerabilities in the application code can be targeted.
+- **Open Ports**: Exposed ports can be entry points for attacks.
+- **Authentication Process**: Weaknesses in how users authenticate can be exploited.
+- **Human Error**: Mistakes made by users or administrators can create vulnerabilities.
+
+To minimize the attack surface:
+- Regularly audit the code for security flaws.
+- Block unused ports on the firewall to limit exposure.
+- Monitor network traffic in real-time to detect any unusual or unauthorized access attempts.
+
+### Connectivity
+Ensuring secure connections between devices and networks is vital for maintaining a safe infrastructure:
+- **Secure Network Cabling**: Protect physical network cables from tampering or unauthorized access.
+- **Application-Level Encryption**: Use encryption to protect data at the application layer.
+- **Network-Level Encryption**: Utilize **IPsec tunnels** and **VPN connections** to secure data transmission at the network layer, ensuring private communication over public networks.
+
+# 3.2 Intrusion Prevention
+
+### Intrusion Prevention System (IPS)
+An **Intrusion Prevention System (IPS)** actively monitors network traffic in real-time to detect and prevent potential intrusions. The system inspects data packets as they traverse the network and takes action to block malicious traffic before it can enter the network.
+
+### Intrusions
+Intrusions typically exploit vulnerabilities in operating systems, applications, or other systems. Common types of intrusions include:
+- **Exploits** against operating systems or applications
+- **Buffer overflows**, where excess data overflows into adjacent memory
+- **Cross-site scripting (XSS)**, which targets web applications
+- Other **vulnerabilities** that attackers can exploit
+
+### Detection vs Prevention
+The key difference between intrusion detection and prevention is their approach to handling threats:
+- **Intrusion Detection System (IDS)**: Primarily designed to detect malicious activity and generate alerts or alarms when a potential threat is identified.
+- **Intrusion Prevention System (IPS)**: Actively blocks malicious traffic and stops intrusions before they can enter the network, offering a more proactive defense.
+
+### Failure Modes
+- **Fail-open**: In the event of a failure, the system allows data to continue flowing. This can be useful in situations where availability is prioritized over security, but it may expose the network to attacks.
+- **Fail-closed**: When the system fails, data does not flow, effectively blocking all traffic. While this prevents unauthorized access, it can lead to service disruption.
+
+### Device Connections
+- **Active Monitoring**: In this configuration, the system is connected inline with network traffic, meaning it can immediately identify malicious traffic and block it in real-time as it passes through the system. Intrusion prevention is typically implemented through active monitoring.
+  
+- **Passive Monitoring**: In passive monitoring, the system examines a copy of the network traffic (using a tap or port mirror) and cannot take action to block or prevent traffic. Intrusion detection systems (IDS) are commonly used in passive monitoring setups, as they can only alert administrators about potential threats but do not actively block them.
+
+# 3.2 Network Appliances
+
+### Jump Server
+A **Jump Server** provides secure access to protected network zones. It serves as a gateway for users to access systems in secure areas of the network.
+
+Key Features:
+- **Highly-secured device**: The jump server is hardened and closely monitored to ensure that it remains secure.
+- **Access Mechanism**: Users typically connect to the jump server using protocols such as SSH, Tunnel, or VPN to securely access other network resources.
+- **Security Concern**: If the jump server is compromised, it could lead to a significant security breach, as it often serves as the gateway to more sensitive areas of the network.
+
+### Proxy
+A **Proxy** sits between the user and the external network, acting on behalf of the user by forwarding their requests.
+
+Key Functions:
+- **Request Forwarding**: The proxy receives user requests and sends them to the external network, masking the user's identity and location.
+- **Caching**: Proxies can cache information, improving network performance by reducing the need to fetch the same data multiple times.
+- **Access Control**: Proxies can be used to control access to certain resources, ensuring that only authorized users can access specific sites or services.
+- **URL Filtering**: Proxies can filter URLs to block access to malicious or undesirable websites.
+- **Content Scanning**: Proxies can scan content for malicious or unwanted material before it reaches the user.
+- **Explicit Configuration**: Some applications may require explicit configuration to work with a proxy, meaning users or devices must be set up to route their traffic through the proxy server.
+
+# 3.2 Port Security
+
+### Port Security on Network Interfaces
+**Port Security** refers to securing the individual interfaces on a network switch or wireless access point to prevent unauthorized access. It restricts which devices can connect to the network and ensures only authorized devices are granted access.
+
+### Extensible Authentication Protocol (EAP)
+**EAP** is an authentication framework used to define several different ways to authenticate devices or users. It is widely used in wireless networks and integrates with 802.1X to enforce security.
+
+Key Features:
+- **Various Authentication Methods**: EAP allows different authentication methods based on RFC standards, and manufacturers can create their own EAP methods.
+- **Integration with 802.1X**: EAP works in conjunction with **IEEE 802.1X**, a network access control (NAC) standard, to prevent access to the network until successful authentication occurs.
+
+### IEEE 802.1X
+**IEEE 802.1X** is a port-based network access control (NAC) protocol that ensures devices cannot access the network until they authenticate properly.
+
+Key Features:
+- **Port-based Control**: 802.1X secures the network by controlling access to network ports. Devices must authenticate before gaining access to the network.
+- **Authentication Process**: It is used in combination with an authentication database, such as **RADIUS**, **LDAP**, **TACACS+**, or **Kerberos**, to validate credentials.
+
+### EAP and 802.1X Interaction
+EAP integrates with **802.1X** to enforce port security by requiring authentication before granting network access.
+
+Components of the Authentication Process:
+- **Supplicant**: The client device that requests access to the network.
+- **Authenticator**: The network device (e.g., a switch or wireless access point) that controls access to the network.
+- **Authentication Server**: A server (e.g., RADIUS) that validates the credentials provided by the supplicant before granting access.
+
+# 3.2 Firewall Types
+
+### Overview of Firewalls
+**Firewalls** are security devices or software designed to control the flow of network traffic. They enforce corporate security policies by regulating both inbound and outbound data, protecting sensitive material, controlling access to inappropriate content, and preventing attacks such as viruses and malware.
+
+Key Functions:
+- **Control Network Traffic**: Firewalls control the flow of traffic between networks, ensuring only legitimate traffic passes through.
+- **Corporate Control**: Used to manage sensitive information and restrict access to unauthorized sites and services.
+- **Protection Against Attacks**: Firewalls help defend against viruses, malware, and other cyber threats.
+
+### Network-Based Firewalls
+Network-based firewalls filter traffic by examining port numbers or applications. They operate at different layers of the OSI model.
+
+Key Features:
+- **OSI Layer 4 vs Layer 7**: Firewalls may filter traffic at OSI Layer 4 (Transport Layer, e.g., port numbers) or Layer 7 (Application Layer, e.g., web applications).
+- **Traditional vs NSFW Firewalls**: Network-based firewalls are often configured to block traffic deemed not safe for work (NSFW), such as adult content.
+- **Traffic Encryption and VPN**: Firewalls can encrypt traffic and establish VPN tunnels between sites.
+- **Layer 3 Functionality**: Many firewalls also act as routers, sit on the ingress/egress of the network, provide NAT (Network Address Translation), and authenticate dynamic routing communications.
+
+### Unified Threat Management (UTM) / All-in-One Security Appliance
+**UTM** appliances combine multiple security functions in one device. These are typically focused at Layer 4 and filter traffic based on port numbers.
+
+Key Features:
+- **URL Filtering**: Blocks or allows access to specific websites.
+- **Content and Malware Inspection**: Scans network traffic for harmful content and malware.
+- **Spam Filtering**: Protects against unwanted email.
+- **Additional Functions**: May include CSU/DSU, routers, switches, IDS/IPS, bandwidth shaping, and VPN endpoints.
+
+### Next-Generation Firewall (NGFW)
+**NGFWs** work at the OSI Application Layer and can make forwarding decisions based on the applications in use.
+
+Key Features:
+- **Deep Packet Inspection (DPI)**: Every packet is analyzed, and decisions are made based on detailed inspection of the application layer traffic.
+- **Advanced Decodes**: Identifies who is sending the traffic, where it’s going, and what’s in the application layer.
+- **Application-Based Control**: NGFWs control traffic based on the specific applications that generate it.
+- **Intrusion Prevention**: NGFWs include IPS features that apply application-specific vulnerability signatures to traffic.
+- **Content Filtering**: Controls access to websites and content through URL filters.
+
+### Web Application Firewall (WAF)
+**WAFs** are specialized firewalls designed to protect web applications by filtering and monitoring HTTP/HTTPS traffic.
+
+Key Features:
+- **Analyzes Web Input**: WAFs apply rules to control incoming and outgoing web traffic.
+- **Protection Against Attacks**: WAFs block common exploits such as SQL injection, cross-site scripting (XSS), and other methods of exploiting web applications.
+- **PCI DSS Compliance**: WAFs are often required for compliance with the Payment Card Industry Data Security Standard (PCI DSS), which mandates protection of payment-related data.
+
+# 3.2 Secure Communication
+
+### VPNs (Virtual Private Networks)
+A **VPN** creates an encrypted link across a public network, such as the internet, ensuring secure data transmission between endpoints.
+
+#### VPN Concentrator
+A **VPN concentrator** is the endpoint device that employees connect to when using an encrypted link to access the corporate network.
+
+Key Features:
+- **Encryption/Decryption**: The concentrator encrypts outgoing data and decrypts incoming data.
+- **Integration with Firewalls**: Often, a VPN concentrator is integrated into a firewall device.
+
+### Encrypted Tunnel
+An **encrypted tunnel** ensures privacy and confidentiality of data traveling across the public internet.
+
+![image](https://github.com/user-attachments/assets/8e3b099a-6763-4a7a-b66f-5c2298607333)
+
+
+Key Features:
+- **Data Encryption**: The tunnel wraps data in multiple layers of encryption to prevent unauthorized access.
+- **Headers and Trailers**: The original data packet is wrapped in IPsec headers and trailers, which the VPN concentrator uses to determine where the data should go.
+
+### SSL/TLS VPN (Secure Sockets Layer VPN)
+**SSL/TLS VPNs** use the widely recognized SSL/TLS protocol (TCP/443) to encrypt and secure the communication channel.
+
+Key Features:
+- **Firewall-Friendly**: SSL/TLS VPNs typically do not encounter firewall issues because they operate over port 443.
+- **No VPN Clients**: Users do not need to install large VPN clients, as the communication can occur through a browser or lightweight software.
+- **Authentication**: Unlike IPsec, SSL/TLS VPNs often do not require digital certificates or shared passwords for user authentication.
+- **On-Demand Access**: SSL/TLS VPNs allow remote devices to connect on-demand via a VPN client or a browser.
+- **Always-On Configuration**: Some VPN software can be configured to always remain connected.
+
+### Site-to-Site IPsec VPN
+**Site-to-site IPsec VPNs** are "always-on" connections between two networks, usually connected through firewalls that act as VPN concentrators.
+
+Key Features:
+- **Always-On**: The connection remains active continuously, making it ideal for business-to-business or branch office connections.
+- **Firewall Integration**: Firewalls are often configured to handle IPsec VPN connections, providing a seamless and secure connection between sites.
+
+### SD-WAN (Software-Defined Wide Area Network)
+**SD-WAN** is an advanced networking solution designed to optimize the connectivity and performance of wide area networks, especially for cloud-based applications.
+
+Key Features:
+- **Cloud-Based Optimization**: SD-WAN enables direct communication with cloud-based applications without routing traffic through a central point.
+- **Flexibility**: SD-WAN is built for flexibility, improving cloud application performance and reducing dependency on traditional data centers.
+
+### SASE (Secure Access Service Edge)
+**SASE** is a next-generation solution that combines network security with WAN capabilities, offering secure access to applications and data, particularly in cloud environments.
+
+Key Features:
+- **Efficiency in Communication**: SASE streamlines communication to cloud-based applications, improving security and performance.
+- **Comprehensive Security**: It offers a blend of security solutions, including firewalling, secure web gateways, and zero trust network access (ZTNA).
+- **Planning and Implementation**: Implementing SASE requires careful planning, as it is a complex, integrated solution combining networking and security functions.
+
+### Selection of Effective Controls
+When selecting secure communication options, consider the following:
+
+- **VPN**: 
+  - SSL/TLS VPNs for user access.
+  - IPsec tunnels for site-to-site communication.
+  
+- **SD-WAN**: 
+  - Manages network connectivity to the cloud but may not fully address security concerns.
+  
+- **SASE**: 
+  - Offers a comprehensive, secure solution for cloud-based communication, requiring careful planning and implementation to ensure effectiveness.
+
+# 3.3 Data Types and Classifications
+
+### Data Types
+
+1. **Regulated Data**
+   - Managed by third-party organizations and subject to government laws and statutes.
+   - **Example**: Credit card data must be stored in a manner compliant with PCI DSS regulations.
+
+2. **Trade Secrets**
+   - Information unique to an organization, such as secret formulas or business processes.
+   - Protected from disclosure to maintain competitive advantage.
+
+3. **Intellectual Property**
+   - May be publicly visible but is protected by copyright, trademarks, or patents.
+   - Protects innovations and creations of an organization.
+
+4. **Legal Information**
+   - Information that should be publicly available but must also protect private data.
+   - Includes court records, judge and attorney information, and other legal documentation.
+   - **Example**: PII (Personally Identifiable Information) should be kept private.
+
+5. **Financial Information**
+   - Includes internal financial details, customer financial information, and payment records.
+   - **Example**: Credit card data, bank records, and payment details.
+
+6. **Human-Readable vs. Non-Human Readable Data**
+   - **Human-Readable**: Data that is clear and understandable by humans (e.g., CSV, XML, JSON).
+   - **Non-Human Readable**: Data encoded or represented in formats that humans cannot directly interpret (e.g., barcodes, images).
+
+---
+
+### Data Classifications
+
+1. **Proprietary Data**
+   - Data owned by an organization, often including trade secrets or other unique information specific to the organization.
+
+2. **PII (Personally Identifiable Information)**
+   - Information that can be used to identify an individual, including but not limited to:
+     - Name
+     - Date of birth
+     - Mother's maiden name
+     - Biometric data
+
+3. **PHI (Protected Health Information)**
+   - Health-related information about an individual, including:
+     - Health status
+     - Healthcare records
+     - Payments for healthcare services
+
+4. **Sensitive Data**
+   - Data that includes intellectual property, PII, and PHI. This data is particularly sensitive and requires additional security measures.
+
+5. **Confidential Data**
+   - Very sensitive data that requires approval to access. May include trade secrets or internal business processes that are critical to the organization’s success.
+
+6. **Public / Unclassified Data**
+   - Data that is freely accessible to the public without restrictions.
+
+7. **Private / Classified / Restricted Data**
+   - Data with restricted access, often requiring a non-disclosure agreement (NDA) or other formal agreements for access.
+
+8. **Critical Data**
+   - Data essential to the organization's operations and business continuity. Critical data requires the highest level of security and ensures 100% availability whenever needed.
+
+# 3.3 States of Data
+
+### Data at Rest
+- Refers to data stored on a storage device such as an HDD, SSD, or Flash Drive.
+- **Security Measures**:
+  - **Encryption**: Apply whole disk encryption, database encryption, or file/folder-level encryption to protect the data when not in use.
+  - **Permissions**: Use access control lists (ACLs) to restrict access, ensuring only authorized users can access the data.
+
+### Data in Transit
+- Refers to data being transmitted over a network or data in motion, traveling through switches, routers, and other devices.
+- **Risks**: Data can be intercepted by attackers during transit if not adequately protected.
+- **Security Measures**:
+  - **Network-based Protection**: Firewalls and Intrusion Prevention Systems (IPS) can help monitor and control traffic.
+  - **Encryption**: Use transport encryption protocols such as TLS (Transport Layer Security) or IPsec (Internet Protocol Security) to secure data in transit.
+
+### Data in Use
+- Refers to data actively being processed in system memory, including RAM, CPU registers, and cache.
+- **Risks**: Data in use is often decrypted for processing, making it vulnerable to attackers who may extract it from memory.
+- **Security Measures**:
+  - **Memory Protection**: Tools to protect data in memory, such as encryption in use or sandboxing, can reduce exposure.
+
+### Data Sovereignty
+- Refers to the legal implications of where data is stored and processed based on the country it resides in.
+- **Laws**: Different countries have laws that govern how data is handled, and data must comply with the laws of the country where it is stored.
+  - **Example**: Under GDPR, data collected on EU citizens must be stored within the EU.
+- **Implications**: Compliance with local data protection laws may restrict where data can be stored or processed.
+
+### Geolocation
+- Refers to the physical location of data and users.
+- **Location Tracking**: Various technologies like 802.11 (Wi-Fi), GPS, and mobile provider data can be used to determine the location of data or users.
+- **Security Measures**:
+  - **Access Control**: Geolocation can help manage access to data, restricting access based on location, such as preventing access from unauthorized regions or allowing administrative access only within secure zones.
+
+# 3.3 Protecting Data
+
+### Geographic Restrictions
+- Refers to controlling access based on the network location of the user.
+  - **Identification**: Identifying the location via IP subnet or geolocation.
+  - **Challenges**: Mobile devices can make it difficult to pinpoint location, but GPS and 802.11 wireless are highly accurate methods.
+  - **IP Address**: Less reliable, as it’s harder to track the physical location of a user accurately through IP.
+
+### Geofencing
+- **Definition**: A technology that automatically restricts or allows access based on the user's geographical location.
+  - **Example**: Restricting access to an app unless the user is near a specific location, such as an office.
+  
+### Protecting Data
+- **Primary Goal**: Protecting data, which exists in many forms across storage drives, networks, CPUs, memory, etc.
+  - **Methods**: 
+    - Encryption
+    - Security policies
+    - Data permissions, ensuring that only authorized users can access sensitive data.
+
+### Encryption
+- **Definition**: Converts plaintext (cleartext) into unreadable ciphertext.
+  - **Process**: Requires a decryption key to revert ciphertext back to plaintext.
+  - **Goal**: Secure data from unauthorized access by making it unreadable without the correct decryption key.
+  
+### Hashing
+- **Definition**: A method for representing data as a short string (hash), which is a one-way process.
+  - **Uses**: 
+    - Store passwords securely.
+    - Verify the integrity of data (e.g., checking if a downloaded document matches the original).
+    - Often used for non-repudiation, digital signatures, and ensuring data integrity.
+  - **Characteristics**: Hashing is collision-resistant, meaning that two different inputs won’t produce the same hash.
+
+### Obfuscation
+- **Definition**: Making understandable data difficult to interpret.
+  - **Purpose**: Helps obscure the inner workings of a system, preventing attackers from easily identifying security vulnerabilities.
+  - **Note**: Though it adds complexity, it doesn’t make it impossible for attackers to reverse the obfuscation.
+
+### Masking
+- **Definition**: Hiding part of the original data to protect sensitive information.
+  - **Example**: Masking a Social Security Number (SSN) or credit card number.
+  - **Consideration**: Data may still be intact in storage, but its full visibility is restricted based on permissions.
+  - **Techniques**: Substitution, shuffling, encryption, or partial data removal.
+
+### Tokenisation
+- **Definition**: Replacing sensitive data with a placeholder that has no direct value.
+  - **Example**: Replacing a credit card number with a temporary token during transactions.
+  - **Benefit**: Even if an attacker captures the token, it cannot be used outside the specific context where it was generated.
+  - **Difference**: Unlike encryption or hashing, tokenisation doesn’t transform the original data, but rather substitutes it with a non-sensitive placeholder.
+
+### Segmentation
+- **Definition**: Dividing a network or system into isolated segments to enhance security, performance, and simplify management.
+  - **Benefit**: By splitting data into smaller, isolated sections, attackers have to breach multiple segments to access all the data, making attacks more difficult.
+  - **Best Practice**: Sensitive data should be highly segmented and have the strongest security measures in place.
+
+### Permission Restrictions
+- **Definition**: Controlling access to data and systems based on user accounts and permissions.
+  - **Process**:
+    - During account creation or management, rights and permissions are set.
+    - Ensure users only have access to data they are authorized to view or modify.
+    - Authentication methods like password policies and multi-factor authentication (MFA) act as another layer of defense.
+
+# 3.4 Resiliency
+
+### High Availability
+- **Definition**: Systems that are designed to be "always on" and continuously available, minimizing downtime.
+  - **Components**: Typically involves multiple components working together, with **active/active** configurations providing scalability and better resource distribution.
+  - **Cost**: Achieving higher availability often involves higher costs, as additional resources and redundancy are necessary.
+
+### Server Clustering
+- **Definition**: Combining two or more servers to operate as a single larger server, presenting a unified service to users.
+  - **Benefits**:
+    - Increased capacity and availability.
+    - Often managed and configured at the OS level.
+    - Devices in the cluster typically use the same OS for consistency.
+
+![image](https://github.com/user-attachments/assets/1e0e15d5-7873-46ee-a2f9-f234ad8a418c)
+
+  
+### Load Balancing
+- **Definition**: A device or software that distributes incoming network traffic across multiple servers, ensuring no single server is overwhelmed.
+  - **Flexibility**: The servers behind the load balancer may run different operating systems.
+  - **Scalability**: The load balancer dynamically adjusts the number of active servers by adding or removing them based on demand and server availability.
+
+### Site Resiliency
+- **Definition**: The ability of IT infrastructure, systems, and applications to operate smoothly or recover quickly from disruptions.
+  - **Disruptions**: Can include hardware failures, power outages, natural disasters, or cyber-attacks.
+  - **Redundancy**: Allows for recovery by switching to alternate sites or servers if the primary site fails.
+
+### Types of Recovery Sites:
+- **Hot Site**: 
+  - An exact replica of your data center, including hardware and systems, which is kept continuously synchronized.
+  - **Benefit**: Instant failover with minimal downtime.
+  - **Drawback**: Very costly since you duplicate everything.
+  
+- **Cold Site**: 
+  - A basic site with no infrastructure; it can be built up as needed.
+  - **Benefit**: Least expensive, but requires time and effort to bring online.
+  
+- **Warm Site**: 
+  - A middle ground, containing partial infrastructure like empty racks or minimal hardware.
+  - **Benefit**: Faster recovery than a cold site, but still less costly than a hot site.
+
+### Geographic Dispersion
+- **Definition**: Deploying infrastructure in multiple physical locations away from the primary site.
+  - **Risk Mitigation**: Helps ensure operations continue in the event of a natural disaster, such as hurricanes, floods, or tornadoes.
+  - **Challenge**: Logistical challenges, including transporting equipment and moving employees to the backup site, can make geographic dispersion difficult to manage.
+
+### Platform Diversity
+- **Definition**: The use of multiple operating systems to reduce vulnerability risks.
+  - **Benefit**: Different OS vulnerabilities (e.g., Windows vs. Linux) don't usually affect each other, thus reducing exposure to single-platform threats.
+  - **Drawback**: Increases the attack surface by adding more platforms, which can also complicate system management and security.
+
+### Multi-cloud Systems
+- **Definition**: Using multiple cloud service providers (e.g., AWS, Microsoft Azure, Google Cloud) to host data and applications.
+  - **Benefit**: Geographic and service provider diversification ensures that an outage with one provider doesn’t affect operations with others.
+  - **Consideration**: You must plan for cloud outages and ensure that data is sufficiently distributed across different regions and providers.
+
+### Continuity of Operations Planning (COOP)
+- **Definition**: Planning and preparing to continue essential functions during emergencies, such as natural disasters, cyber-attacks, or pandemics.
+  - **Examples**: Having manual processes (e.g., paper records, phone transactions) in place for when technology fails.
+  - **Key Requirement**: COOP plans must be documented and regularly tested to ensure they are effective during disruptions.
+
+# 3.4 Capacity Planning
+
+### Balanced Approach for Capacity Demand
+Capacity planning requires finding a balance between people, technology, and infrastructure to ensure the organization can meet demand efficiently and effectively.
+
+### People
+- Some services require human intervention to operate properly, such as:
+  - **Call center support lines**
+  - **Technology services**
+  
+- **Challenges**:
+  - **Too few employees**: Can lead to delays in service or response times.
+    - **Solution**: Recruit new staff, though this can be time-consuming.
+  - **Too many employees**: Can lead to inefficiency and increased operational costs.
+    - **Solution**: Redeploy employees to other parts of the organization or downsize.
+
+### Technologies
+- **Scalability**: Choose technologies that can scale up or down based on demand.
+  - **Web services**: 
+    - Distribute load across multiple services to manage high traffic volumes.
+  - **Database services**: 
+    - **Clustering** multiple SQL servers to improve performance.
+    - **Database partitioning** to increase capacity and reduce strain on individual systems.
+  - **Cloud services**: 
+    - Provide **on-demand scalability**.
+    - Offer seemingly unlimited resources, depending on payment and usage.
+
+### Infrastructure
+- Infrastructure includes all physical and cloud-based resources necessary for the organization’s operations, such as:
+  - **Application servers**
+  - **Network services**
+  - **CPU, network, and storage devices**
+
+#### Physical Devices
+- **Challenges**: Requires significant investment in purchasing, configuring, and installing physical hardware.
+  
+#### Cloud-Based Devices
+- **Benefits**: 
+  - Easier and quicker to deploy.
+  - Adaptable for sudden and unexpected capacity increases.
+  - Offer flexibility with resources that can be scaled up or down based on current demand.
+
+# 3.4 Recovery Testing
+
+### Importance of Testing Before an Actual Event
+Testing your recovery procedures and infrastructure before an actual event helps ensure the effectiveness of your plan. It is crucial to:
+- **Schedule regular update sessions**: Annual or semi-annual tests.
+- **Define specific rules of engagement**: Establish clear guidelines to follow during the test.
+- **Use realistic scenarios**: Create scenarios with limited time to assess the team's response.
+- **Evaluate and document**: Analyze the response, identify areas for improvement, and discuss lessons learned.
+
+### Tabletop Exercise (TTX)
+A **discussion-based simulation** used to assess and improve organizational preparedness for emergency situations.
+- **Benefits**:
+  - Improved **preparedness** for real incidents.
+  - Enhanced **coordination** among teams.
+  - **Identification of gaps** in processes and systems.
+  - Increased **training and awareness** across the organization.
+  - Boosted **confidence** in handling emergencies.
+
+### Failover Testing
+Failover testing evaluates whether redundant configurations can successfully take over if a failure occurs.
+- **Process**:
+  - The **failover** happens automatically, with users being redirected to alternative resources.
+  - **Redundant infrastructure** is created and implemented to ensure minimal disruption during failures.
+
+### Simulation Testing
+Simulation tests assess the organization's security by replicating real-world attack scenarios.
+- **Examples**:
+  - **Phishing attacks**.
+  - **Password requests**.
+  - **Data breaches**.
+
+### Phishing Simulations
+- **Create and send phishing emails** to the organization's user community.
+- **Objective**: Assess internal security (e.g., Did the email filters block it?).
+- **Test users**: See who clicks on the phishing link and require additional training for those who fall for it.
+
+### Parallel Processing
+**Parallel processing** involves using multiple CPUs to perform tasks simultaneously.
+- **Use Cases**:
+  - A **single computer with multiple CPU cores** or multiple physical CPUs.
+  - **Multiple computers** working together on complex tasks.
+  
+- **Benefits**:
+  - **Improved performance** by splitting complex tasks across processors.
+  - **Improved recovery**: Quickly identify faulty systems and remove them from the processing pool while continuing operations with the remaining functional processors.
+
+# 3.4 Backups
+
+### Importance of Backups
+Backups are crucial for recovering important and valuable data in case of disasters. Proper planning is necessary to ensure that critical data is regularly backed up and can be quickly restored when needed.
+
+### Types of Backup Implementations
+Backups vary based on several factors:
+- **Total amount of data** to be backed up.
+- **Type of backup** (full, incremental, differential).
+- **Backup media** (disk, tape, cloud).
+- **Storage location** (onsite, offsite).
+- **Backup and recovery software** used to manage the process.
+- **Frequency of backups** (daily, weekly, or hourly).
+
+### Onsite Backup
+- **Advantages**:
+  - No internet connection required.
+  - Data is immediately available for recovery.
+  - Generally less expensive than offsite backups.
+  
+### Offsite Backup
+- **Advantages**:
+  - Data is transferred over the internet or WAN link.
+  - Data is available for recovery after a disaster, even if onsite systems are compromised.
+  - Restoration can occur from anywhere.
+
+Many organizations use both onsite and offsite backups to ensure redundancy.
+
+### Backup Frequency
+The frequency of backups depends on the nature of the data:
+- **Systems with low change frequency** might only need weekly backups.
+- **High-change systems** may require hourly or daily backups.
+- Organizations often maintain **multiple backup sets** (daily, weekly, monthly) for different types of data.
+- Managing a large number of backup sets requires **significant planning**.
+
+### Backup Encryption
+Encryption ensures that backup data, particularly offsite backups, is protected against unauthorized access.
+- **Important for cloud backups** to prevent eavesdropping.
+- A **recovery key** is required to restore encrypted backups.
+
+### Snapshots
+Snapshots provide an efficient way to back up entire systems with a single operation:
+- A snapshot is a **point-in-time copy** of a system's configuration and data.
+- **Daily snapshots** may contain only changes from the previous snapshot, allowing fast recovery.
+- Users can **revert to any snapshot** for quick restoration.
+
+### Recovery Testing
+Regularly testing backups is essential to confirm that data can be restored successfully:
+- **Disaster recovery testing** simulates a real disaster and ensures backups can be restored.
+- **Periodic audits** are necessary to maintain the integrity of backup systems.
+
+### Replication
+Replication involves creating a copy of data at multiple locations in real-time:
+- **Real-time backup** ensures that data is always synchronized across locations.
+- Useful for ensuring **availability and disaster recovery**.
+- Data can be replicated to **remote sites**, providing redundancy in case of a disaster.
+
+### Journaling
+Journaling is used to ensure data consistency and integrity, especially in file systems and databases:
+- A **journal log** records changes made to the data before they are written to storage.
+- **Power outages** or interruptions during writes can result in corrupted data, but journaling helps recover to a usable state.
+- **Journal entries** are updated before and after data is written to storage, ensuring a consistent state.
+
+# 3.5 Power Resiliency
+
+### Importance of Power Resiliency
+Power is a critical foundation for all technological systems, and planning for power outages is essential for ensuring continuous operations. Since power is typically provided by third-party providers, it’s not always possible to control availability. However, several strategies can mitigate the impact of power issues.
+
+### Types of Power Issues
+- **Short Power Outages**: These are brief interruptions that can be addressed with short-term backup solutions.
+- **Long-Term Power Issues**: Extended outages may require more robust and long-term power solutions to maintain operations.
+
+### Uninterruptible Power Supply (UPS)
+A UPS provides short-term backup power during outages, helping to prevent data loss and system shutdowns:
+- **Functions**:
+  - Protects against blackouts, brownouts, and power surges.
+  - Provides enough time to safely shut down systems during an outage.
+
+#### Types of UPS
+1. **Offline/Standby UPS**: Provides basic backup, activating only when power failure is detected.
+2. **Line-interactive UPS**: Provides more stable power by adjusting voltage fluctuations while offering backup power.
+3. **On-line/Double-conversion UPS**: Offers the highest level of protection by continuously converting power, providing clean and stable electricity even during power disruptions.
+
+#### UPS Features
+- **Auto Shutdown**: Automatically shuts down systems to prevent damage when power is lost.
+- **Battery Capacity**: Determines how long the UPS can supply power to devices.
+- **Outlets**: The number of devices the UPS can support.
+- **Phone Line Suppression**: Protects against surges in phone lines.
+
+### Generators
+Generators provide long-term power backup, allowing systems to remain operational during extended power outages:
+- **Fuel Storage Required**: Generators require fuel to operate, which must be stored and maintained.
+- **Full-Building Power**: Can power an entire building or specific areas, with outlets marked for generator use.
+- **Start-up Time**: Generators may take a few minutes to start up; during this time, a UPS can be used to keep systems running until the generator is fully operational.
+
+By incorporating both UPS and generators, organizations can ensure that both short-term and long-term power needs are met, minimizing downtime during power disruptions.
 
 
 </details>
