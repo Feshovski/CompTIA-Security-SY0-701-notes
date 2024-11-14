@@ -8,11 +8,11 @@ I used [Free labs](https://www.101labs.net/comptia-security/) for hands on pract
 
 I made flash cards to help me memorise the most common TCP/UDP and their uses: 
 
-TCP Ports: 20/21, 22, 23, 63, 80,110, 143, 443, 445, 3389
+TCP Ports: 20/21, 22, 23, 63, 80,110, 143, 443, 445, 3389.
 
-UDP Ports: 53, 67/68, 69, 88, 636 89/990, 993, 995, 6154 
+UDP Ports: 53, 67/68, 69, 88, 636 89/990, 993, 995, 6154.
 
-My final and honestly most useful study resource was actually a [Reddit post](https://www.reddit.com/r/CompTIA/comments/zkjs1d/how_a_dumdum_like_me_passed_sec/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+My final and one of the more useful resources was this [Reddit post].(https://www.reddit.com/r/CompTIA/comments/zkjs1d/how_a_dumdum_like_me_passed_sec/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
 
 I am a full time student in Australia and was able to get a **50% voucher** after emailing CompTia and verifying my student status.
 
